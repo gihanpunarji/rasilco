@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'azcupcake';
+    src: url("/fonts/azcupcakes-regular.otf");
+}
+
+.font-azcupcake {
+
+    font-family: "azcupcake", sans-serif;
+}

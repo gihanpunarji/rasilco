@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasilco bakers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#F5DF23',
+                        'primary-hover': '#ffe600',
+                        'bakery-red': '#A11C25',
+                        'bakery-brown': '#8b4513',
+                        'bakery-dark': '#141313',
+                        'bakery-gold': '#ffd700',
+                        'bakery-gold-light': '#ffe600ab'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bakery-dark text-gray-800">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-bakery-dark py-4 mt-8">
+        <nav class="flex justify-between items-center w-11/12 mx-auto">
+            <div class="font-azcupcake text-bakery-red text-4xl font-bold pt-1">Rasilco Bakers</div>
+            
+            <!-- Desktop Navigation Links -->
+            <ul class="hidden md:flex list-none mr-64 lg:mr-96">
+                <li class="ml-8"><a href="#home" class="text-bakery-gold-light hover:text-bakery-gold transition duration-300 font-medium">Home</a></li>
+                <li class="ml-8"><a href="#about" class="text-bakery-gold-light hover:text-bakery-gold transition duration-300 font-medium">About</a></li>
+                <li class="ml-8"><a href="#contact" class="text-bakery-gold-light hover:text-bakery-gold transition duration-300 font-medium">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Toggle Button -->
+            <div class="md:hidden text-white text-2xl cursor-pointer pb-5" onclick="toggleMenu()">☰</div>
+            
+            <!-- Menu Button with Icon -->
+            <div class="hidden md:flex items-center gap-5 px-8 py-6 bg-primary rounded-lg cursor-pointer font-bold transition duration-300 ease-in hover:bg-primary-hover hover:text-yellow-600">
+                <button class="text-black bg-transparent border-none text-base">Explore our Menu</button>
+                <img src="images/restaurant.png" alt="restaurant image" class="h-6 w-6"/>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <ul id="mobile-menu" class="md:hidden bg-bakery-brown w-full fixed top-20 -left-full flex flex-col items-center py-8 transition-all duration-500 z-50">
+            <li class="my-4"><a href="#home" class="text-white hover:text-bakery-gold transition duration-300">Home</a></li>
+            <li class="my-4"><a href="#about" class="text-white hover:text-bakery-gold transition duration-300">About</a></li>
+            <li class="my-4"><a href="#contact" class="text-white hover:text-bakery-gold transition duration-300">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex justify-center items-center px-4 text-white">
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-8 w-full mx-auto">
+            <!-- Left Side -->
+            <div class="flex flex-col items-center">
+                <div class="w-full h-96 md:h-[500px] mb-8">
+                    <img src="images/1.png" alt="Bakery Image" class="w-full h-full object-cover">
+                </div>
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Freshly Baked Happiness</h1>
+                    <p class="text-lg mb-8">Indulge in our artisanal bread, delicious pastries, and mouthwatering cakes baked with love and tradition since 1985.</p>
+                    <a href="#" class="inline-block bg-bakery-gold text-bakery-brown font-bold py-3 px-8 rounded-lg transition duration-300 hover:bg-bakery-brown hover:text-bakery-gold transform hover:-translate-y-1 hover:shadow-lg">Explore Our Menu</a>
+                </div>
+            </div>
+            
+            <!-- Right Side -->
+            <div class="hidden lg:block">
+                <div class="w-full h-[500px]">
+                    <img src="images/2.png" alt="Bakery Image" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl text-bakery-brown text-center font-bold mb-12">Our Signature Creations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md transition duration-300 transform hover:-translate-y-2">
+                    <img src="/api/placeholder/400/300" alt="Sourdough Bread" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl text-bakery-brown font-semibold mb-2">Artisan Sourdough</h3>
+                        <p class="text-gray-600 mb-4">Our classic sourdough bread made with centuries-old traditions and techniques.</p>
+                        <div class="text-bakery-brown font-bold text-lg">$5.99</div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md transition duration-300 transform hover:-translate-y-2">
+                    <img src="/api/placeholder/400/300" alt="Chocolate Croissant" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl text-bakery-brown font-semibold mb-2">Chocolate Croissants</h3>
+                        <p class="text-gray-600 mb-4">Buttery, flaky croissants filled with rich chocolate that melts in your mouth.</p>
+                        <div class="text-bakery-brown font-bold text-lg">$3.99</div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md transition duration-300 transform hover:-translate-y-2">
+                    <img src="/api/placeholder/400/300" alt="Birthday Cake" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl text-bakery-brown font-semibold mb-2">Celebration Cakes</h3>
+                        <p class="text-gray-600 mb-4">Custom-designed cakes for special occasions made with premium ingredients.</p>
+                        <div class="text-bakery-brown font-bold text-lg">From $29.99</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class=" text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="h-96 rounded-2xl overflow-hidden">
+                <img src="/api/placeholder/600/400" alt="Bakery Owner" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h2 class="text-4xl text-bakery-gold font-bold mb-6">Our Story</h2>
+                <p class="mb-6 leading-relaxed">Sweet Delights Bakery began in 1985 when master baker James Williams decided to bring his family recipes to the community. What started as a small bakery with just three types of bread has grown into a beloved local institution.</p>
+                <p class="mb-6 leading-relaxed">Today, while embracing modern techniques, we still maintain our commitment to quality ingredients, traditional methods, and the warm, personal touch that makes our baked goods special.</p>
+                <p class="mb-8 leading-relaxed">Every morning at 4 AM, our bakers begin their day to ensure you get the freshest breads and pastries. We don't take shortcuts - just flour, water, salt, and time.</p>
+                <a href="#" class="inline-block bg-bakery-gold text-bakery-brown font-bold py-3 px-8 rounded-full transition duration-300 hover:bg-bakery-brown hover:text-bakery-gold hover:border hover:border-bakery-gold transform hover:-translate-y-1 hover:shadow-lg">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl text-bakery-brown font-bold mb-12">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <p class="italic mb-4">"The almond croissants are simply divine. I drive across town every weekend just to get my hands on them!"</p>
+                    <h4 class="text-bakery-brown font-semibold">Sarah Johnson</h4>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <p class="italic mb-4">"My wedding cake was not only beautiful but delicious. Everyone kept asking where it was from!"</p>
+                    <h4 class="text-bakery-brown font-semibold">Michael & Lisa Brown</h4>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <p class="italic mb-4">"As someone with celiac disease, finding their gluten-free options has been life-changing. Finally, bread that actually tastes like bread!"</p>
+                    <h4 class="text-bakery-brown font-semibold">David Miller</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-bakery-dark py-20 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div>
+                <h2 class="text-4xl text-bakery-brown font-bold mb-6">Get In Touch</h2>
+                <p class="mb-8 leading-relaxed text-white">Have questions about our products or want to place a special order? Contact us today!</p>
+                <div class="space-y-4 text-white">
+                    <div class="flex items-center">
+                        <span class="mr-4 text-2xl">📍</span>
+                        <span>123 Baker Street, Flourtown, CA 90210</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="mr-4 text-2xl">📞</span>
+                        <span>(555) 123-4567</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="mr-4 text-2xl">✉️</span>
+                        <span>info@sweetdelightsbakery.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="mr-4 text-2xl">🕒</span>
+                        <span>Mon-Sat: 7am - 7pm, Sun: 8am - 3pm</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div>
+                <form class="grid gap-6">
+                    <input type="text" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-bakery-brown">
+                    <input type="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-bakery-brown">
+                    <input type="text" placeholder="Subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-bakery-brown">
+                    <textarea placeholder="Your Message" required class="w-full px-4 py-3 rounded-lg border border-gray-300 h-40 focus:outline-none focus:ring-2 focus:ring-bakery-brown"></textarea>
+                    <button type="submit" class="bg-bakery-brown text-white font-bold py-4 px-6 rounded-lg transition duration-300 hover:bg-bakery-gold hover:text-bakery-brown">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bakery-dark text-white py-8 px-4 text-center">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-3xl font-bold mb-4">Rasilco <span class="text-bakery-gold">Bakers</span></div>
+            
+            <!-- Social Icons -->
+            <div class="my-6">
+                <a href="#" class="mx-4 text-2xl hover:text-bakery-gold transition duration-300">FB</a>
+                <a href="#" class="mx-4 text-2xl hover:text-bakery-gold transition duration-300">IG</a>
+                <a href="#" class="mx-4 text-2xl hover:text-bakery-gold transition duration-300">TW</a>
+                <a href="#" class="mx-4 text-2xl hover:text-bakery-gold transition duration-300">PT</a>
+            </div>
+            
+            <!-- Footer Links -->
+            <ul class="flex flex-wrap justify-center my-6 space-x-4">
+                <li><a href="#home" class="hover:text-bakery-gold transition duration-300">Home</a></li>
+                <li><a href="#about" class="hover:text-bakery-gold transition duration-300">About</a></li>
+                <li><a href="#contact" class="hover:text-bakery-gold transition duration-300">Contact</a></li>
+                <li><a href="#" class="hover:text-bakery-gold transition duration-300">Menu</a></li>
+                <li><a href="#" class="hover:text-bakery-gold transition duration-300">Order Online</a></li>
+            </ul>
+            
+            <p class="mt-8">&copy; 2025 Rasilco Bakers. All rights reserved.</p>
+            <a href="https://www.flaticon.com/free-icons/food" title="food icons" class="text-gray-500 text-sm mt-4 inline-block">Food icons created by Freepik - Flaticon</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('-left-full')) {
+                mobileMenu.classList.remove('-left-full');
+                mobileMenu.classList.add('left-0');
+            } else {
+                mobileMenu.classList.remove('left-0');
+                mobileMenu.classList.add('-left-full');
+            }
+        }
+
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.remove('left-0');
+                mobileMenu.classList.add('-left-full');
+            });
+        });
+    </script>
+</body>
+</html>
