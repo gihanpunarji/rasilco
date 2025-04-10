@@ -127,7 +127,7 @@
                     <li><a href="#home" class="text-white hover:text-bakery-gold transition-colors duration-300">Home</a></li>
                     <li><a href="#products" class="text-white hover:text-bakery-gold transition-colors duration-300">Products</a></li>
                     <li><a href="#about" class="text-white hover:text-bakery-gold transition-colors duration-300">About</a></li>
-                    <li><a href="#testimonials" class="text-white hover:text-bakery-gold transition-colors duration-300">Testimonials</a></li>
+                    <li><a href="#testimonials" class="text-white hover:text-bakery-gold transition-colors duration-300">Reviews</a></li>
                     <li><a href="#contact" class="text-white hover:text-bakery-gold transition-colors duration-300">Contact</a></li>
                     <li>
                         <a href="#order" class="bg-bakery-gold text-bakery-brown font-bold py-2 px-6 rounded-full hover:bg-bakery-brown hover:text-bakery-gold border border-transparent hover:border-bakery-gold transition-all duration-300">
@@ -158,7 +158,7 @@
                     <li><a href="#home" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">Home</a></li>
                     <li><a href="#products" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">Products</a></li>
                     <li><a href="#about" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">About</a></li>
-                    <li><a href="#testimonials" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">Testimonials</a></li>
+                    <li><a href="#testimonials" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">Reviews</a></li>
                     <li><a href="#contact" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">Contact</a></li>
                     <li class="pt-6">
                         <a href="#order" class="bg-bakery-gold text-bakery-brown font-bold py-3 px-8 rounded-full hover:bg-bakery-brown hover:text-bakery-gold border border-transparent hover:border-bakery-gold transition-all duration-300 mobile-link">
@@ -170,14 +170,32 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Carousel -->
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-making-dough-flour-and-water-close-up-10305-large.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <!-- Hero Background Carousel -->
+        <div class="swiper heroSwiper absolute inset-0 z-0">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="absolute inset-0 hero-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="Bakery">
+                </div>
+                <div class="swiper-slide">
+                    <div class="absolute inset-0 hero-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="Bread">
+                </div>
+                <div class="swiper-slide">
+                    <div class="absolute inset-0 hero-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1495147466023-ac2c7e1b8804?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="Pastries">
+                </div>
+                <div class="swiper-slide">
+                    <div class="absolute inset-0 hero-overlay"></div>
+                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-making-dough-flour-and-water-close-up-10305-large.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
         
         <div class="container mx-auto px-4 py-16 z-10 relative">
@@ -420,7 +438,7 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Reviews -->
     <section id="testimonials" class="py-20 relative overflow-hidden">
         <div class="absolute inset-0 z-0 bg-fixed bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1495147466023-ac2c7e1b8804?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); opacity: 0.1;"></div>
         
@@ -432,7 +450,7 @@
                 </p>
             </div>
             
-            <!-- Testimonials Swiper -->
+            <!-- Reviews Swiper -->
             <div class="swiper testimonialsSwiper scroll-reveal" style="animation-delay: 0.3s">
                 <div class="swiper-wrapper pb-12">
                     <!-- Testimonial 1 -->
@@ -443,7 +461,7 @@
                                     <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="w-full h-full object-cover">
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-semibold text-bakery-gold">Sarah Johnson</h4>
+                                    <h4 class="text-xl font-semibold text-bakery-gold">Tharushi Bandara</h4>
                                     <div class="flex text-bakery-gold mt-1">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -491,7 +509,7 @@
                                     <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="David Miller" class="w-full h-full object-cover">
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-semibold text-bakery-gold">David Miller</h4>
+                                    <h4 class="text-xl font-semibold text-bakery-gold">Supun Gunasinghe</h4>
                                     <div class="flex text-bakery-gold mt-1">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -515,7 +533,7 @@
                                     <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Thompson" class="w-full h-full object-cover">
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-semibold text-bakery-gold">Emma Thompson</h4>
+                                    <h4 class="text-xl font-semibold text-bakery-gold">Nuwani Thushara</h4>
                                     <div class="flex text-bakery-gold mt-1">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -583,7 +601,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-bakery-gold mb-1">Our Location</h4>
-                                <p>123 Baker Street, Flourtown, CA 90210</p>
+                                <p>123 Main Street, Ruwanwella, SL 60490</p>
                             </div>
                         </div>
                         
@@ -593,7 +611,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-bakery-gold mb-1">Call Us</h4>
-                                <p>(555) 123-4567</p>
+                                <p>(+94) 77 201 0 915</p>
                             </div>
                         </div>
                         
@@ -727,7 +745,7 @@
                         <li><a href="#home" class="text-gray-400 hover:text-bakery-gold transition-colors duration-300">Home</a></li>
                         <li><a href="#products" class="text-gray-400 hover:text-bakery-gold transition-colors duration-300">Products</a></li>
                         <li><a href="#about" class="text-gray-400 hover:text-bakery-gold transition-colors duration-300">About Us</a></li>
-                        <li><a href="#testimonials" class="text-gray-400 hover:text-bakery-gold transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-bakery-gold transition-colors duration-300">Reviews</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-bakery-gold transition-colors duration-300">Contact</a></li>
                     </ul>
                 </div>
@@ -782,7 +800,26 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Initialize Swiper
+        // Initialize Hero Background Swiper
+        const heroSwiper = new Swiper(".heroSwiper", {
+            slidesPerView: 1,
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            speed: 1500,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+        });
+
+        // Initialize Products Swiper
         const productSwiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 20,
@@ -805,6 +842,7 @@
             },
         });
 
+        // Initialize Testimonial Swiper
         const testimonialSwiper = new Swiper(".testimonialsSwiper", {
             slidesPerView: 1,
             spaceBetween: 20,
