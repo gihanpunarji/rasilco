@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadComponent('about', 'about.html');
     loadComponent('blog', 'blog.html');
     loadComponent('testimonials', 'testimonials.html');
+    loadComponent('team', 'team.html');
     loadComponent('contact', 'contact.html');
     loadComponent('footer', 'footer.html');
     
@@ -195,17 +196,39 @@ function initializeScripts() {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Simulate form submission
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitButton.disabled = true;
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
             
-            setTimeout(() => {
-                alert('Thank you for your message! We will get back to you soon.');
+            // Basic validation
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            try {
+                // Construct the mailto URL with pre-filled fields
+                const mailtoUrl = `mailto:gihanpunarji@gmail.com?subject=${encodeURIComponent(subject || 'Contact Form Submission')}&body=${encodeURIComponent(
+                    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+                )}`;
+                
+                // Open the default email client
+                window.location.href = mailtoUrl;
+                
+                // Reset form after successful submission
                 contactForm.reset();
-                submitButton.innerHTML = 'Send Message';
-                submitButton.disabled = false;
-            }, 2000);
+            } catch (error) {
+                console.error('Error opening email client:', error);
+                alert('There was an error opening your email client. Please try again or contact us directly at info@rasilcobakers.com');
+            }
         });
     }
 
