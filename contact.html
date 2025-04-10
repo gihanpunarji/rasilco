@@ -1,0 +1,182 @@
+<section id="contact" class="py-20 relative">
+  <div
+    class="absolute inset-0 z-0 bg-fixed bg-center bg-cover"
+    style="
+      background-image: url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      opacity: 0.1;
+    "
+  ></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Contact Info -->
+      <div class="scroll-reveal">
+        <h2
+          class="text-3xl md:text-5xl font-playfair font-bold mb-6 text-bakery-gold"
+        >
+          Get In Touch
+        </h2>
+        <p class="text-lg mb-8">
+          Have questions about our products or want to place a special order?
+          Contact us today!
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class="bg-bakery-gold text-bakery-dark p-3 rounded-full mr-4">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-bakery-gold mb-1">Our Location</h4>
+              <p>123 Main Street, Ruwanwella, SL 60470</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="bg-bakery-gold text-bakery-dark p-3 rounded-full mr-4">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-bakery-gold mb-1">Call Us</h4>
+              <p>(+94) 77 201 0 915</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="bg-bakery-gold text-bakery-dark p-3 rounded-full mr-4">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-bakery-gold mb-1">Email Us</h4>
+              <p>info@rasilcobakers.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="bg-bakery-gold text-bakery-dark p-3 rounded-full mr-4">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-bakery-gold mb-1">Opening Hours</h4>
+              <p>
+                Mon-Sat: 7am - 7pm <br />
+                Sun: 8am - 3pm
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <h4 class="font-semibold text-bakery-gold mb-4">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="bg-white bg-opacity-10 hover:bg-bakery-gold hover:text-bakery-dark text-white p-3 rounded-full transition-all duration-300"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-white bg-opacity-10 hover:bg-bakery-gold hover:text-bakery-dark text-white p-3 rounded-full transition-all duration-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-white bg-opacity-10 hover:bg-bakery-gold hover:text-bakery-dark text-white p-3 rounded-full transition-all duration-300"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-white bg-opacity-10 hover:bg-bakery-gold hover:text-bakery-dark text-white p-3 rounded-full transition-all duration-300"
+            >
+              <i class="fab fa-pinterest-p"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div
+        class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl scroll-reveal"
+        style="animation-delay: 0.3s"
+      >
+        <h3 class="text-2xl font-semibold text-bakery-gold mb-6">
+          Send Us a Message
+        </h3>
+        <form id="contactForm">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium mb-2"
+              >Your Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-bakery-gold"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium mb-2"
+              >Your Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-bakery-gold"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="subject" class="block text-sm font-medium mb-2"
+              >Subject</label
+            >
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-bakery-gold"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label for="message" class="block text-sm font-medium mb-2"
+              >Your Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-bakery-gold"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-bakery-gold text-bakery-dark font-bold py-3 rounded-lg hover:bg-bakery-brown hover:text-bakery-gold border border-transparent hover:border-bakery-gold transition-all duration-300"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="h-96 relative">
+  <iframe
+  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15813.653234869518!2d80.10931333148267!3d7.745909826727223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgangani%20products!5e0!3m2!1sen!2slk!4v1744264323491!5m2!1sen!2slk"
+  class="w-full h-full"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+  >
+  </iframe>
+ 
+</section>

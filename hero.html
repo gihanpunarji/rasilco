@@ -1,0 +1,52 @@
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <!-- Hero Background Carousel -->
+    <div class="swiper heroSwiper absolute inset-0 z-0">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="absolute inset-0 hero-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="Bakery">
+            </div>
+            <div class="swiper-slide">
+                <div class="absolute inset-0 hero-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="Bread">
+            </div>
+            <div class="swiper-slide">
+                <div class="absolute inset-0 hero-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1495147466023-ac2c7e1b8804?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="Pastries">
+            </div>
+            <div class="swiper-slide">
+                <div class="absolute inset-0 hero-overlay"></div>
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-making-dough-flour-and-water-close-up-10305-large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 py-16 z-10 relative">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 text-shadow animate-fade-in">
+                Artisanal Baking <span class="text-bakery-gold">Perfection</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 opacity-90 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.3s">
+                Handcrafted breads and pastries made with passion, tradition and the finest ingredients since 1985.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style="animation-delay: 0.6s">
+                <a href="#products" class="bg-bakery-gold text-bakery-brown font-bold py-3 px-8 rounded-full hover:bg-bakery-brown hover:text-bakery-gold border border-transparent hover:border-bakery-gold transition-all duration-300 transform hover:-translate-y-1">
+                    Explore Our Menu
+                </a>
+                <a href="#about" class="bg-transparent text-white border border-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-bakery-dark transition-all duration-300 transform hover:-translate-y-1">
+                    Our Story
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+        <a href="#products" class="text-white hover:text-bakery-gold transition-colors duration-300">
+            <i class="fas fa-chevron-down text-3xl"></i>
+        </a>
+    </div>
+</section>

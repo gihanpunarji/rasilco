@@ -5,6 +5,82 @@
 
 .font-azcupcake {
 
-    font-family: "azcupcake", sans-serif;
+    font-family: "azcupcake", azcupcake;
 }
-
+/* Custom styles that don't fit in Tailwind */
+html {
+    scroll-behavior: smooth;
+}
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.bg-blur {
+    backdrop-filter: blur(8px);
+}
+.swiper-pagination-bullet {
+    background-color: #FFD700 !important;
+}
+.hero-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+}
+.card-hover {
+    transition: all 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.blur-load {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.blur-load::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: pulse 2.5s infinite;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+@keyframes pulse {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+.animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+.animate-bounce-slow {
+    animation: bounce 3s ease-in-out infinite;
+}

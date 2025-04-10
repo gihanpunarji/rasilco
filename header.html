@@ -1,0 +1,58 @@
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-4 py-4">
+        <nav class="flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-3xl md:text-4xl font-playfair font-bold text-bakery-gold">
+                    Rasilco <span class="text-bakery-red">Bakers</span>
+                </h1>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-10 items-center">
+                <li><a href="#home" class="text-white hover:text-bakery-gold transition-colors duration-300">Home</a></li>
+                <li><a href="#products" class="text-white hover:text-bakery-gold transition-colors duration-300">Products</a></li>
+                <li><a href="#about" class="text-white hover:text-bakery-gold transition-colors duration-300">About</a></li>
+                <li><a href="#blog" class="text-white hover:text-bakery-gold transition-colors duration-300">Blog</a></li>
+                <li><a href="#testimonials" class="text-white hover:text-bakery-gold transition-colors duration-300">Reviews</a></li>
+                <li><a href="#contact" class="text-white hover:text-bakery-gold transition-colors duration-300">Contact</a></li>
+                <li>
+                    <a href="#order" class="bg-bakery-gold text-bakery-brown font-bold py-2 px-6 rounded-full hover:bg-bakery-brown hover:text-bakery-gold border border-transparent hover:border-bakery-gold transition-all duration-300">
+                        Order Now
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white text-2xl focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="fixed inset-0 bg-bakery-darker bg-opacity-95 z-50 transition-all duration-500 transform translate-x-full" id="mobile-menu">
+        <div class="container mx-auto px-4 py-4 h-full flex flex-col">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-3xl font-playfair font-bold text-bakery-gold">
+                    Rasilco <span class="text-bakery-red">Bakers</span>
+                </h1>
+                <button class="text-white text-2xl focus:outline-none" id="menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="flex flex-col space-y-6 items-center justify-center flex-grow">
+                <li><a href="#home" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">Home</a></li>
+                <li><a href="#products" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">Products</a></li>
+                <li><a href="#about" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">About</a></li>
+                <li><a href="#blog" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">Blog</a></li>
+                <li><a href="#testimonials" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">Testimonials</a></li>
+                <li><a href="#contact" class="text-2xl text-white hover:text-bakery-gold transition-colors duration-300 mobile-link">Contact</a></li>
+                <li class="pt-6">
+                    <a href="#order" class="bg-bakery-gold text-bakery-brown font-bold py-3 px-8 rounded-full hover:bg-bakery-brown hover:text-bakery-gold border border-transparent hover:border-bakery-gold transition-all duration-300 mobile-link">
+                        Order Now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
